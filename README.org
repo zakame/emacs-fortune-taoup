@@ -1,0 +1,36 @@
+#+TITLE: fortune-taoup --- Fortune cookies from The Art of Unix Programming and friends
+
+
+A simple Emacs extension to show words of wisdom from the =fortune=-like
+tool, [[https://github.com/globalcitizen/taoup][taoup]].
+
+* Quick Start
+
+  #+begin_src emacs-lisp
+  (use-package fortune-taoup
+    :load-path "to/where/you/cloned/fortune-taoup"
+    :if (executable-find "taoup-fortune")
+    :custom
+    (fortune-taoup-text-scale 6 "Slightly larger text for my $WORK laptop.")
+    :config
+    (setq initial-buffer-choice
+          (lambda ()
+            (toggle-frame-fullscreen)
+            (fortune-taoup))))
+  #+end_src
+
+* Notes
+
+** TODO Use =taoup= directly instead of =taoup-fortune=
+
+   The latter script is an example tool that gives single statements at
+   random - maybe let this extension manage all of them instead?
+
+** TODO Add a basic test and CI
+
+   Test is something simple enough like getting a random line, and CI is
+   likely GitHub Actions.
+   
+** TODO Publish to [[https://melpa.org][MELPA]], or not...
+
+   This extension is simple enough to [[https://github.com/quelpa/quelpa][quelpa]] instead, but we'll see...
