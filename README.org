@@ -1,5 +1,7 @@
 #+TITLE: fortune-taoup --- Fortune cookies from The Art of Unix Programming and friends
 
+#+CAPTION: Running =M-x fortune-taoup= to get a sample screenshot
+[[./screenshot.png]]
 
 A simple Emacs extension to show words of wisdom from the =fortune=-like
 tool, [[https://github.com/globalcitizen/taoup][taoup]].
